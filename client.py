@@ -40,7 +40,7 @@ def restore_snapshot(repository, snapshot, target_path, priority, wait_done):
         snapshot=snapshot,
         target_path=target_path,
         priority=priority,
-        wait_done=wait_done
+        get_result=wait_done
     )
     if wait_done:
         click.echo('Restore ended')

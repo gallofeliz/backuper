@@ -282,7 +282,7 @@ class Daemon(rpyc.Service):
         self._task_manager.add_task(
             task=Task(fn=do_restore_snapshot, priority=priority),
             ignore_if_duplicate=True,
-            get_result=False
+            get_result=get_result
         )
 
     def backup(self, backup_name, priority=None):
